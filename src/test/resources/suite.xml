@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="FinalExerciseApi" verbose="1">
+    <listeners>
+<listener class-name="org.BankTransactions.utils.Listener"></listener>
+    </listeners>
+
+    <parameter name="endpoint" value="https://637e9b555b1cc8d6f9310eca.mockapi.io/banktransactions"/>
+
+    <test name="API test">
+
+        <classes>
+            <class name="org.BankTransactions.test.EmptyEndpointTest"></class>
+            <class name="org.BankTransactions.test.InitializePojoTest"></class>
+            <class name="org.BankTransactions.test.verifyDuplicatedEmailsTest"></class>
+            <class name="org.BankTransactions.test.UpdateAccountNumberTest"></class>
+
+        </classes>
+    </test>
+</suite>
